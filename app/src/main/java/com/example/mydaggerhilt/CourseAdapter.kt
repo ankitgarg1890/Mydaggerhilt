@@ -8,8 +8,9 @@ import androidx.core.view.get
 import androidx.core.view.size
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import java.nio.file.Files.size
 
-class CourseAdapter(private val cryptocurrency: List<Course>) : RecyclerView.Adapter<CourseAdapter.ViewHolder>()  {
+class CourseAdapter(private val course: List<Course>) : RecyclerView.Adapter<CourseAdapter.ViewHolder>()  {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflating list data from list_item to view
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
@@ -17,9 +18,9 @@ class CourseAdapter(private val cryptocurrency: List<Course>) : RecyclerView.Ada
     }
     // Binding cryptocurrency list to ViewHolder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(cryptocurrency[position])
+        holder.bind(course[position])
     }
-    override fun getItemCount() = cryptocurrency.size
+    override fun getItemCount() = course.size
     // Iterating ViewHolder and loading it's
     // content to our Image and Text ViewsT
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
