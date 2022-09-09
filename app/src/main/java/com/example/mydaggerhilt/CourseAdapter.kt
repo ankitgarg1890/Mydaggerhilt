@@ -8,7 +8,6 @@ import androidx.core.view.get
 import androidx.core.view.size
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.item_layout.view.*
 
 class CourseAdapter(private val cryptocurrency: List<Course>) : RecyclerView.Adapter<CourseAdapter.ViewHolder>()  {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
